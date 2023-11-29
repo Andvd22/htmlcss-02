@@ -46,6 +46,24 @@ a {
     margin-right: auto;
 }
 
+.heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -1.16px;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+    letter-spacing: -0.76px;
+}
+
 /* header */
 .header {
     background: #fffcf4;
@@ -107,7 +125,7 @@ a {
 /* Hero */
 
 .hero {
-    padding-top: 56px;
+    padding: 56px 0 65px;
     background: #fffcf4;
 }
 
@@ -127,11 +145,12 @@ a {
     height: 685px;
     border-radius: 20px;
     object-fit: cover;
+    vertical-align: bottom; /* căn theo chân của ảnh nếu không có nó sẽ dư ra 1 tí chân hoặc sủa thành display: block*/
 }
 
 .hero-summary {
     width: 270px;
-    padding: 28px 24px;
+    padding: 24px;
     border-radius: 12px;
     background: #fff;
     position: absolute;
@@ -142,6 +161,7 @@ a {
 
 .hero-summary .item {
     display: flex;
+    align-items: center;
 }
 
 .hero-summary .item + .item {
@@ -188,15 +208,6 @@ a {
 .hero .content-block {
     width: 52%;
     padding: 64px 0 0 130px;
-}
-
-.hero .heading {
-    color: #171100;
-    font-family: var(--font-heading);
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: -1.16px;
 }
 
 .hero .content-block .desc {
@@ -254,4 +265,50 @@ a {
 
 .hero .stats strong:last-child {
     padding-left: 28px;
+}
+
+/* Popular */
+
+.popular {
+    padding: 65px 0px;
+    margin-top: 135px;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* .control {
+        margin-left: auto;
+    } */
+}
+
+.popular-top .control-btn {
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular-top .control {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
 }
