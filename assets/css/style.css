@@ -312,3 +312,92 @@ a {
     background: var(--primary-color);
     cursor: pointer;
 }
+
+/* Course */
+
+.course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.course-item {
+    width: 31.6%;
+    /* flex: 1; xong để bên dưới thumb có width: 100% cũng làm cho 3 ảnh ngang ra và có kính thước = nhau */
+
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+
+.course-list .thumb {
+    width: 368px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+    margin-left: 0px;
+}
+
+.course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-item .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+.course-item .rating {
+    display: flex;
+    align-items: center;
+}
+
+.course-item .rating span {
+    color: #fea31b;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    margin-left: 6px;
+}
+
+.course-item .desc {
+    margin-top: 6px;
+    width: 326px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.85; /* 185.714% */
+}
+
+.course-item .foot {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.course-item .foot span {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+.course-item .foot .btn {
+    border: none;
+    width: 118px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 25px;
+    margin-left: auto;
+}
+
+.course-item .foot .btn:hover {
+    background: #ffb900;
+    cursor: pointer;
+}
