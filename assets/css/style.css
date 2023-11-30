@@ -585,13 +585,18 @@ a {
     margin-top: 55px;
     display: flex;
     gap: 30px;
+    overflow: hidden;
 }
 
 .blog-item {
     /* flex: 1; */
-    width: 33.33%;
+    width: calc(33.33% - 20px);
     border-radius: 16px;
     background: #fff;
+    flex-shrink: 0;
+    /* transition: all ease 0.3s;
+    transform: translateX(-100%); */
+    /* khi cho flex-shrink: 0; thì 9 ảnh sẽ không bị nén nữa nhưng ở đây xuất hiện 1 vấn đề đấy là nó sẽ giữ đúng tỉ lệ 33,33%*3 + gap 30+30 = 60px nên vượt quá 100% vậy ta cần cho mỗi ảnh nhỏ lại 33.33%-20px */
 }
 
 .blog-item:hover {
@@ -657,6 +662,30 @@ a {
     line-height: 1.75; /* 175% */
 }
 
+.blog-item .btn {
+    font-size: 1.4rem;
+}
+
 .blog-item .btn:hover {
     background: #ffb900;
+}
+
+.blog .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 38px;
+}
+
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5f5b53;
+    cursor: pointer;
+}
+
+.blog .dot.active {
+    background: var(--primary-color);
+    cursor: default;
 }
