@@ -560,3 +560,103 @@ a {
     width: 470px;
     height: 440px;
 }
+
+/* Blog */
+
+.blog {
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #fffcf4;
+}
+
+.blog .blog-top {
+    text-align: center;
+}
+
+.blog-top .desc {
+    width: 448px;
+    color: #696262;
+    font-size: 1.6rem;
+    line-height: 1.75; /* 175% */
+    margin: 16px auto 0;
+}
+
+.blog-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.blog-item {
+    /* flex: 1; */
+    width: 33.33%;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.blog-item:hover {
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog-item .thumb {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blog-item .info {
+    padding: 20px 20px 28px;
+}
+
+.blog-item .date {
+    /* display: flex; */
+    display: inline-flex;
+    align-items: center;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.857; /* 185.714% */
+    position: relative;
+    padding-bottom: 12px;
+    /* Nếu cho thằng thẻ giả after của nó bottom -12px thì nó sẽ bị đè lên dòng chữ bên dưới */
+}
+
+.blog-item .date::before {
+    /* position: relative;
+    top: -2px; khi tăng kích thước chữ .date => thẻ span.date sẽ tăng theo dẫn đến không chính xác vì vậy ta căn giữa thẻ giả nằm trong thẻ span theo trục dọc để căn giữa*/
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.blog-item .date::after {
+    content: "";
+    display: inline-block;
+    /* width: 160px;  */
+    /* Nếu để độ rộng cố định là 160px thì khi chữ bên trên dài ra nhìn nó sẽ không được hợp lí nên ta đo thì thấy thẻ giả after dài hơn dòng chữ span.date là 27px nên ta sẽ để là right: -27px; nhưng lại phát sinh vấn đề bới vì thẻ cha span.date đang để là flex tương tự như thẻ block nó sẽ chiếm hết chiều ngang bên trong thẻ cha của nó nên ta phải đổi thành inline-flex */
+    height: 1px;
+    border-radius: 16px;
+    background: #e2dfda;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: -27px;
+}
+
+.blog-item .title a {
+    margin: 12px 0;
+    display: inline-block;
+    color: #171100;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.blog-item .btn:hover {
+    background: #ffb900;
+}
